@@ -20,4 +20,13 @@ public class Pessoa {
 
     @OneToMany(mappedBy = "pessoa")
     private List<MatriculaDisciplinaPessoa> matriculaDisciplinaPessoas = new ArrayList<>();
+
+    public Pessoa() {
+    }
+
+    public Pessoa(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+
+    }
 }

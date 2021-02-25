@@ -1,6 +1,7 @@
 package com.watlas.produto.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +20,7 @@ public class Disciplina {
 
     private String nome;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn
     private Turma turma;
@@ -26,7 +28,12 @@ public class Disciplina {
     @OneToMany(mappedBy = "disciplina")
     private List<MatriculaDisciplinaPessoa> matriculaDisciplinaPessoas = new ArrayList<>();
 
+    public Disciplina() {
+    }
 
-
-
+    public Disciplina(Long id, String nome, Turma turma) {
+        this.id = id;
+        this.nome = nome;
+        this.turma = turma;
+    }
 }

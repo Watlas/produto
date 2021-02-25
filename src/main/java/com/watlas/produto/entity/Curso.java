@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
 @Getter
 @Setter
 @Entity
@@ -16,4 +17,11 @@ public class Curso {
 
     private String nome;
 
+    public Curso() {
+    }
+
+    public Curso(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
 }
