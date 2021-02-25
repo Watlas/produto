@@ -34,8 +34,8 @@ public class DbService {
         Turma t3 = new Turma(null, "Turma 3", c3);
 
         Disciplina d1 = new Disciplina(null, "Criação de sites", t1);
-        Disciplina d2 = new Disciplina(null, "Criação de sites", t2);
-        Disciplina d3 = new Disciplina(null, "Criação de sites", t3);
+        Disciplina d2 = new Disciplina(null, "Analise e criação de dados", t2);
+        Disciplina d3 = new Disciplina(null, "Como processar pessoas ricas", t3);
 
         Pessoa p1 = new Pessoa(null, "Watlas");
         Pessoa p2 = new Pessoa(null, "Joao");
