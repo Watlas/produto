@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Getter
@@ -16,6 +18,9 @@ public class Curso {
     private Long id;
 
     private String nome;
+
+    @OneToMany(mappedBy = "curso")
+    private List<Turma> turma = new ArrayList<>();
 
     public Curso() {
     }

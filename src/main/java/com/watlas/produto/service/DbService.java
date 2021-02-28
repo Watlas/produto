@@ -10,18 +10,14 @@ public class DbService {
 
     @Autowired
     private CursoRepository cursoRepository;
-
     @Autowired
-    private DisciplinaRepository disciplinaService;
-
+    private DisciplinaRepository disciplinaRepository;
     @Autowired
-    private MatriculaDisciplinaPessoaRepository matriculaDisciplinaPessoaService;
-
+    private MatriculaDisciplinaPessoaRepository matriculaDisciplinaPessoaRepository;
     @Autowired
-    private PessoaRepository pessoaService;
-
+    private PessoaRepository pessoaRepository;
     @Autowired
-    private TurmaRepository turmaService;
+    private TurmaRepository turmaRepository;
 
     public void instanciaBaseDeDados() {
 
@@ -49,21 +45,21 @@ public class DbService {
         cursoRepository.save(c2);
         cursoRepository.save(c3);
 
-        turmaService.save(t1);
-        turmaService.save(t2);
-        turmaService.save(t3);
+        turmaRepository.save(t1);
+        turmaRepository.save(t2);
+        turmaRepository.save(t3);
 
-        disciplinaService.save(d1);
-        disciplinaService.save(d2);
-        disciplinaService.save(d3);
+        disciplinaRepository.save(d1);
+        disciplinaRepository.save(d2);
+        disciplinaRepository.save(d3);
 
-        pessoaService.save(p1);
-        pessoaService.save(p2);
-        pessoaService.save(p3);
+        pessoaRepository.save(p1);
+        pessoaRepository.save(p2);
+        pessoaRepository.save(p3);
 
-        matriculaDisciplinaPessoaService.save(mdp1);
-        matriculaDisciplinaPessoaService.save(mdp2);
-        matriculaDisciplinaPessoaService.save(mdp3);
+        matriculaDisciplinaPessoaRepository.save(mdp1);
+        matriculaDisciplinaPessoaRepository.save(mdp2);
+        matriculaDisciplinaPessoaRepository.save(mdp3);
 
     }
 
